@@ -1,0 +1,10 @@
+version: '3'
+services:
+  echo:
+    build: echo
+  forward:
+    build: forward
+    ports:
+      - "11111:12346"
+    links:
+      - echo

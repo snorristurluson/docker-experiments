@@ -1,0 +1,5 @@
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+COPY forward.py /
+EXPOSE 12346
+ENTRYPOINT python forward.py 12346 echo 12345
